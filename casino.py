@@ -1,3 +1,4 @@
+from juego1 import dados
 
 def menuPrincipal():
     print("")
@@ -22,7 +23,8 @@ def menuPrincipal():
         elif opcion == "2":
             crearJugador()
         elif opcion == "3":
-            menuJuegos()
+            saldo = 100000
+            menuJuegos(saldo)
         elif opcion == "4":
             print("Gracias por visitarnos, que tengas un feliz dia")
             break
@@ -31,7 +33,7 @@ def menuPrincipal():
             print("Opcion Invalida")
 
 
-def menuJuegos ():
+def menuJuegos(saldo):
     print("")
     print("Nuestro Catalogo: ")
     while True:
@@ -58,7 +60,7 @@ def menuJuegos ():
         elif opcion == "3":
             blackjack()
         elif opcion == "4":
-            dados()
+            saldo = dados(saldo)
         elif opcion == "5":
             saldo()
         elif opcion == "6":
