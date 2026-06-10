@@ -1,4 +1,5 @@
 from juego1 import dados
+from juego2 import tragaMonedas
 
 def menuPrincipal():
     print("")
@@ -35,8 +36,8 @@ def menuPrincipal():
 
 def menuJuegos(saldo):
     print("")
-    print("Nuestro Catalogo: ")
     while True:
+        print("Nuestro Catalogo: ")
         print("")
         print("-------------------------------")
         print("1. Tragamonedas")
@@ -54,7 +55,7 @@ def menuJuegos(saldo):
         print("")
 
         if opcion == "1":
-            tragaMonedas()
+            saldo = tragaMonedas(saldo)
         elif opcion == "2":
             ruleta()
         elif opcion == "3":

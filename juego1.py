@@ -29,6 +29,9 @@ def dados(saldo):
         if apuesta > saldo:
             print("No tienes suficientes dinero")
             continue
+        elif apuesta <= 0:
+            print("Ingrese un numero adecuado")
+            continue
         
         if opcion == "5":
             numero = int(input("Elige un número del 1 al 6: "))
@@ -39,6 +42,7 @@ def dados(saldo):
             if dado >= 4:
                 saldo += apuesta
                 print("Ganaste")
+                print(f"Usted gana {apuesta}")
             else:
                 saldo -= apuesta
                 print("Perdiste")
@@ -46,6 +50,7 @@ def dados(saldo):
             if dado <= 3:
                 saldo += apuesta
                 print("Ganaste")
+                print(f"Usted gana {apuesta}")
             else:
                 saldo -= apuesta
                 print("Perdiste")   
@@ -53,6 +58,7 @@ def dados(saldo):
             if dado % 2 == 0:
                 saldo += apuesta
                 print("Ganaste")
+                print(f"Usted gana {apuesta}")
             else:
                 saldo -= apuesta
                 print("Perdiste") 
@@ -60,13 +66,15 @@ def dados(saldo):
             if dado % 2 != 0:
                 saldo += apuesta
                 print("Ganaste")
+                print(f"Usted gana {apuesta}")
             else:
                 saldo -= apuesta
                 print("Perdiste") 
         elif opcion == "5":
             if dado == numero:
-                saldo += apuesta * 4
+                saldo += apuesta * 6
                 print("Ganaste, ¡Número exacto!")
+                print(f"Usted gana {apuesta * 6}")
             else:
                 saldo -= apuesta
                 print("Perdiste") 
